@@ -10,4 +10,4 @@ alias ssudo='sudo -s -E'
 alias gsm='screen /dev/ttyUSB0 57600 -t GSM'
 alias hgdiff='hg diff | vim -R -'
 
-alias double-tunnel='ssh -t -A -L 8081:localhost:8081 -D 8080 username@server1 ssh -D8081 username@user2'
+alias double-tunnel='ssh -t -A -L 8081:localhost:8081 -D 8080 username@server1 ssh -D8081 username@server2'
