@@ -1,0 +1,21 @@
+[ui]
+username = TsCl <pmontagnier@gmail.com>
+
+[trusted]
+users=root
+groups=root
+
+[extensions]
+mq=
+color=
+#hggit=
+
+#[extensions]
+#hgk=/usr/local/lib/hgk.py
+
+[hooks]
+changegroup=
+#Reload WSGI application
+changegroup.mod_wsgi = touch /var/hg/hgweb.wsgi
+
+[hostfingerprints]
