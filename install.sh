@@ -17,14 +17,14 @@ do
 	if [[ -f $USER_HOME/$filename ]]
 	then
 		echo "$filename already exists."
-		read -p "Replace it (Y/n) ?" input
+		read -p "Replace it (y/N) ?" input
 		shopt -s nocasematch
 		case "$input" in
   			y|Y|Yes) 
 				echo "Replacing $filename"
 				`cp $file $USER_HOME/$filename`
 				;;
-  			* ) echo "Note replacing $filename";;
+  			* ) echo "Not replacing $filename";;
 		esac
 	else
 		echo "$filename doesn't exist, copying it"
