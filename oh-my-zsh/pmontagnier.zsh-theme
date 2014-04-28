@@ -19,7 +19,7 @@ ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[blue]%} ->"
 ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[magenta]%} !"
 
 ZSH_THEME_GIT_PROMPT_STASH_COUNT_BEFORE="%{$fg[yellow]%} [%{$fg[green]%}s"
-ZSH_THEME_GIT_PROMPT_STASH_COUNT_AFTER="%{$fg[yellow]%] "
+ZSH_THEME_GIT_PROMPT_STASH_COUNT_AFTER="%{$fg[yellow]%}] "
 
 # git stash count
 function git_prompt_stash_count(){
