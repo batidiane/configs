@@ -6,7 +6,7 @@ export LSCOLORS="Exfxcxdxbxegedabagacad"
 PROMPT="[%D %*] %B%{$fg[green]%}%n@%m%{$reset_color%}%b:%B%{$fg[blue]%}%~%b%{$reset_color%} %{$fg[yellow]%}#%h%{$reset_color%} [%(?,%F{green}%?,%F{red}%?)%f] %# "
 
 # Right-hand side prompt
-RPROMPT='%(?,%F{green}:%),%F{yellow}%? %F{red}:()%f $(git_prompt_info)%{$reset_color%}$(git_prompt_status)%{$reset_color%}$(git_prompt_stash_count)'
+RPROMPT='%(?,%F{green}:%),%F{yellow}%? %F{red}:()%f $(git_prompt_info)%{$reset_color%}$(git_prompt_status)%{$reset_color%}$(git_prompt_stash_count)%{$reset_color%}'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="(git: %{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%})"
@@ -21,7 +21,7 @@ ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[blue]%} ->"
 ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[magenta]%} !"
 
 ZSH_THEME_GIT_PROMPT_STASH_COUNT_BEFORE="%{$fg[yellow]%} [%{$fg[green]%}s"
-ZSH_THEME_GIT_PROMPT_STASH_COUNT_AFTER="%{$fg[yellow]%] "
+ZSH_THEME_GIT_PROMPT_STASH_COUNT_AFTER="%{$fg[yellow]%}] "
 
 # git stash count
 function git_prompt_stash_count(){
