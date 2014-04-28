@@ -5,6 +5,7 @@ ln -s $(PWD)/oh-my-zsh/pmontagnier.zshrc.zsh ~/.oh-my-zsh/custom/pmontagnier.zsh
 ln -s $(PWD)/oh-my-zsh/pmontagnier.zsh-theme ~/.oh-my-zsh/themes/pmontagnier.zsh-theme
 
 echo 'Linking dotfiles'
+ln -s $(PWD)/oh-my-zsh/.zshrc ~/.zshrc
 ln -s $(PWD)/dotfiles/.bash_aliases ~/.bash_aliases
 ln -s $(PWD)/dotfiles/.bash_profile ~/.bash_profile
 ln -s $(PWD)/dotfiles/.bashrc ~/.bashrc
