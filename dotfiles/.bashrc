@@ -56,3 +56,4 @@ unset use_color safe_term match_lhs
 
 PATH=$PATH:/usr/local/sbin
 export PATH
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

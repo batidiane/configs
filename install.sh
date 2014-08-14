@@ -13,5 +13,9 @@ ln -s $PWD/dotfiles/.hgrc ~/.hgrc
 ln -s $PWD/dotfiles/.screenrc ~/.screenrc
 ln -s $PWD/dotfiles/.vimrc ~/.vimrc
 
+echo 'Installing VIM bundles'
+cd ~/.vim/bundle/
+git clone git://github.com/airblade/vim-gitgutter.git
+
 echo "Done"
 exit 0

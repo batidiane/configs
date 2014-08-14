@@ -50,6 +50,8 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(rails ruby brew git pwn)
 
+# export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin"
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -72,3 +74,5 @@ source $ZSH/oh-my-zsh.sh
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
