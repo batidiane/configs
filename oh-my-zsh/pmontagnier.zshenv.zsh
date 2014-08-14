@@ -20,11 +20,13 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 # ARM cross-compilation
-if [ -z $ARM_CROSSCOMPILE ]; then
-  if [ -d "$HOME/arm-cs-tools" ]; then
-    export PATH="$HOME/arm-cs-tools/bin:$PATH"
-  fi
-fi
+#if [ -z $ARM_CROSSCOMPILE ]; then
+#  if [ -d "$HOME/arm-cs-tools" ]; then
+#    export PATH="$HOME/arm-cs-tools/bin:$PATH"
+#  fi
+#fi
+    
+export PATH="$HOME/arm-cs-tools/bin:$PATH"
 
 # If RVM is needed
 if [ -z $RVM ]; then
@@ -47,3 +49,10 @@ if [ -z $PWNTOOLS ]; then
     export PYTHONPATH="$HOME/Documents/development/pwntools/lib:$PYTHONPATH"
   fi
 fi
+
+export PATH="/opt/local/libexec/gnubin:/opt/local/bin:/opt/local/sbin:$PATH"
+
+export PYTHONPATH=/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages:/opt/local/lib/python2.7/site-packages:${PYTHONPATH}
+
+# Facedancer
+export board=facedancer21
