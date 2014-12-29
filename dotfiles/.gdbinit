@@ -86,7 +86,7 @@
 #     Add global variables to allow user to control stack, data and code window sizes
 #     Increase readability for registers
 #     Some corrections (hexdump, ddump, context, cfp, assemble, gas_asm, tips, prompt)
-#
+#   
 #   Version 6.1-color-user
 #     Took the Gentoo route and ran sed s/user/user/g
 #
@@ -220,7 +220,7 @@ LOCATION may be a line number, function name, or "*" and an address.
 end
 
 
-define bpc
+define bpc 
     if $argc != 1
         help bpc
     else
@@ -588,7 +588,7 @@ define dis
     end
     if $argc == 2
         disassemble $arg0 $arg1
-    end
+    end 
     if $argc > 2
         help dis
     end
@@ -768,7 +768,7 @@ define dumpjump
  # OF = 0
    echo \033[31m
    printf "  Jump is NOT taken"
-  end
+  end 
  end
 ## JNO: 0x71 or 0x0F81 (OF = 0)
  if ($_byte1 == 0x71 || ($_byte1 == 0x0F && $_byte2 == 0x81))
@@ -780,7 +780,7 @@ define dumpjump
  # OF = 1
    echo \033[31m
    printf "  Jump is NOT taken"
-  end
+  end 
  end
 ## JS: 0x78 or 0x0F88 (SF = 1)
  if ($_byte1 == 0x78 || ($_byte1 == 0x0F && $_byte2 == 0x88))
@@ -792,7 +792,7 @@ define dumpjump
  # SF = 0
    echo \033[31m
    printf "  Jump is NOT taken"
-  end
+  end 
  end
 ## JNS: 0x79 or 0x0F89 (SF = 0)
  if ($_byte1 == 0x79 || ($_byte1 == 0x0F && $_byte2 == 0x89))
@@ -804,7 +804,7 @@ define dumpjump
  # SF = 0
    echo \033[31m
    printf "  Jump is NOT taken"
-  end
+  end 
  end
 ## JE or JZ : 0x74 or 0x0F84 (ZF = 1)
  if ($_byte1 == 0x74 || ($_byte1 == 0x0F && $_byte2 == 0x84))
@@ -816,7 +816,7 @@ define dumpjump
  # ZF = 0
    echo \033[31m
    printf "  Jump is NOT taken"
-  end
+  end 
  end
 ## JNE or JNZ : 0x75 or 0x0F85 (ZF = 0)
  if ($_byte1 == 0x75 || ($_byte1 == 0x0F && $_byte2 == 0x85))
@@ -828,7 +828,7 @@ define dumpjump
  # ZF = 0
    echo \033[31m
    printf "  Jump is NOT taken"
-  end
+  end 
  end
 ## JB or JNAE or JC: 0x72 or 0x0F82 (CF = 1)
  if ($_byte1 == 0x72 || ($_byte1 == 0x0F && $_byte2 == 0x82))
@@ -840,7 +840,7 @@ define dumpjump
  # CF = 0
    echo \033[31m
    printf "  Jump is NOT taken"
-  end
+  end 
  end
 ## JNB or JAE or JNC: 0x73 or 0x0F83 (CF = 0)
  if ($_byte1 == 0x73 || ($_byte1 == 0x0F && $_byte2 == 0x83))
@@ -852,7 +852,7 @@ define dumpjump
  # CF = 0
    echo \033[31m
    printf "  Jump is NOT taken"
-  end
+  end 
  end
 ## JBE or JNA: 0x76 or 0x0F86 (CF = 1 or ZF = 1)
  if ($_byte1 == 0x76 || ($_byte1 == 0x0F && $_byte2 == 0x86))
@@ -864,7 +864,7 @@ define dumpjump
  # CF = 0 or ZF = 0
    echo \033[31m
    printf "  Jump is NOT taken"
-  end
+  end 
  end
 ## JA or JNBE: 0x77 or 0x0F87 (CF=0 and ZF=0)
 ## NOTES: verify is this one is correct!
@@ -877,7 +877,7 @@ define dumpjump
  # other cases
    echo \033[31m
    printf "  Jump is NOT taken"
-  end
+  end 
  end
 ## JL or JNGE: 0x7C or 0x0F8C (SF <> OF)
  if ($_byte1 == 0x7C || ($_byte1 == 0x0F && $_byte2 == 0x8C))
@@ -888,7 +888,7 @@ define dumpjump
  #
    echo \033[31m
    printf "  Jump is NOT taken"
-  end
+  end 
  end
 ## JGE or JNL: 0x7D or 0x0F8D (SF = OF)
  if ($_byte1 == 0x7D || ($_byte1 == 0x0F && $_byte2 == 0x8D))
@@ -899,7 +899,7 @@ define dumpjump
  #
    echo \033[31m
    printf "  Jump is NOT taken"
-  end
+  end 
  end
 ## JLE or JNG: 0x7E or 0x0F8E (ZF = 1 and SF = OF)
  if ($_byte1 == 0x7E || ($_byte1 == 0x0F && $_byte2 == 0x8E))
@@ -910,7 +910,7 @@ define dumpjump
  #
    echo \033[31m
    printf "  Jump is NOT taken"
-  end
+  end 
  end
 ## JG or JNLE: 0x7F or 0x0F8F (ZF = 0 and SF = OF)
  if ($_byte1 == 0x7F || ($_byte1 == 0x0F && $_byte2 == 0x8F))
@@ -921,7 +921,7 @@ define dumpjump
  #
    echo \033[31m
    printf "  Jump is NOT taken"
-  end
+  end 
  end
 ## JP or JPE: 0x7A or 0x0F8A (PF = 1)
  if ($_byte1 == 0x7A || ($_byte1 == 0x0F && $_byte2 == 0x8A))
@@ -933,7 +933,7 @@ define dumpjump
  # PF = 0
    echo \033[31m
    printf "  Jump is NOT taken"
-  end
+  end 
  end
 ## JNP or JPO: 0x7B or 0x0F8B (PF = 0)
  if ($_byte1 == 0x7B || ($_byte1 == 0x0F && $_byte2 == 0x8B))
@@ -945,7 +945,7 @@ define dumpjump
  # PF = 0
    echo \033[31m
    printf "  Jump is taken"
-  end
+  end 
  end
 ###### FIX ME !!!!!!!!!!!!!!!!!!!!!!
 ## JCXZ or JECXZ: 0xE3
@@ -960,7 +960,7 @@ end
 # initialize variable
 set $displayobjectivec = 0
 
-define context
+define context 
     echo \033[36m
     printf "----------------------------------------"
     printf "----------------------------------[regs]\n"
@@ -1001,16 +1001,16 @@ define context
       printf "--------------------------------------------------------------------[ObjectiveC]\n"
       echo \033[34m
       x/s $objectivec
-     end
-     set $displayobjectivec = 0
+     end   
+     set $displayobjectivec = 0     
     end
     if $displayobjectivec == 1
       echo \033[36m
       printf "--------------------------------------------------------------------[ObjectiveC]\n"
       echo \033[34m
       x/s $objectivec
-    else
-    end
+    else 
+    end   
    end
     echo \033[0m
 # and this is the end of this little crap
@@ -1172,10 +1172,10 @@ define stepo
     end
     # call *0x??(%ebp) (0xFF55??) || call *0x??(%esi) (0xFF56??) || call *0x??(%edi) (0xFF5F??) || call *0x??(%ebx)
     # call *0x??(%edx) (0xFF52??) || call *0x??(%ecx) (0xFF51??) || call *0x??(%edi) (0xFF57??) || call *0x??(%eax) (0xFF50??)
-    if ($_byte2 == 0x55 || $_byte2 == 0x56 || $_byte2 == 0x5F || $_byte2 == 0x53 || $_byte2 == 0x52 || $_byte2 == 0x51 || $_byte2 == 0x57 || $_byte2 == 0x50)
+    if ($_byte2 == 0x55 || $_byte2 == 0x56 || $_byte2 == 0x5F || $_byte2 == 0x53 || $_byte2 == 0x52 || $_byte2 == 0x51 || $_byte2 == 0x57 || $_byte2 == 0x50) 
      set $_nextaddress = $pc + 0x3
     end
-    # call *0x????????(%ebx) (0xFF93????????) ||
+    # call *0x????????(%ebx) (0xFF93????????) || 
     if ($_byte2 == 0x93 || $_byte2 == 0x94)
      set $_nextaddress = $pc + 6
     end
@@ -1185,7 +1185,7 @@ define stepo
     end
    end
  end
-# if we have found a call to bypass we set a temporary breakpoint on next instruction and continue
+# if we have found a call to bypass we set a temporary breakpoint on next instruction and continue 
  if ($_nextaddress != 0)
   tbreak *$_nextaddress
   continue
@@ -1320,7 +1320,7 @@ define nop
     if ($argc > 2 || $argc == 0)
         help nop
     end
-
+    
     if ($argc == 1)
     	set *(unsigned char *)$arg0 = 0x90
     else
@@ -1342,7 +1342,7 @@ define null
     if ( $argc >2 || $argc == 0)
         help null
     end
-
+ 
     if ($argc == 1)
 	set *(unsigned char *)$arg0 = 0
     else
@@ -1448,11 +1448,11 @@ define get_insn_type
                 set $INSN_TYPE = 2
             end
         end
-        if ($_byte1 == 0xFF)
+        if ($_byte1 == 0xFF)        
             # opcode extension
             set $_byte2 = *(unsigned char *)($arg0 + 1)
             set $_opext = ($_byte2 & 0x38)
-            if ($_opext == 0x10 || $_opext == 0x18)
+            if ($_opext == 0x10 || $_opext == 0x18) 
                 # "call"
                 set $INSN_TYPE = 3
             end
@@ -1476,11 +1476,11 @@ define step_to_call
     set $_saved_ctx = $SHOW_CONTEXT
     set $SHOW_CONTEXT = 0
     set $SHOW_NEST_INSN = 0
-
+ 
     set logging file /dev/null
     set logging redirect on
     set logging on
-
+ 
     set $_cont = 1
     while ($_cont > 0)
         stepi
@@ -1498,11 +1498,11 @@ define step_to_call
 
     set $SHOW_CONTEXT = $_saved_ctx
     set $SHOW_NEST_INSN = 0
-
+ 
     set logging file ~/gdb.txt
     set logging redirect off
     set logging on
-
+ 
     printf "step_to_call command stopped at:\n  "
     x/i $pc
     printf "\n"
@@ -1525,7 +1525,7 @@ define trace_calls
     set $SHOW_NEST_INSN = 0
     set $_nest = 1
     set listsize 0
-
+  
     set logging overwrite on
     set logging file ~/gdb_trace_calls.txt
     set logging on
@@ -1567,7 +1567,7 @@ define trace_calls
 
     set $SHOW_CONTEXT = $_saved_ctx
     set $SHOW_NEST_INSN = 0
-
+ 
     printf "Done, check ~/gdb_trace_calls.txt\n"
 end
 document trace_calls
@@ -1577,7 +1577,7 @@ end
 
 
 define trace_run
-
+ 
     printf "Tracing...please wait...\n"
 
     set $_saved_ctx = $SHOW_CONTEXT
@@ -1776,7 +1776,7 @@ end
 define tip_syntax
     printf "\n"
     printf "\t    INTEL SYNTAX                        AT&T SYNTAX\n"
-    printf "\tmnemonic dest, src, imm            mnemonic src, dest, imm\n"
+    printf "\tmnemonic dest, src, imm            mnemonic src, dest, imm\n" 
     printf "\t[base+index*scale+disp]            disp(base, index, scale)\n"
     printf "\tregister:      eax                 register:      %%eax\n"
     printf "\timmediate:     0xFF                immediate:     $0xFF\n"
@@ -1817,3 +1817,4 @@ Tips on automatically displaying values when a program stops.
 end
 
 #EOF
+

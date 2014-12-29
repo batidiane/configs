@@ -1,5 +1,6 @@
 # Setup the default editor
 export EDITOR='vim'
+export LC_ALL="fr_FR.UTF-8"
 
 # Set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
@@ -14,6 +15,14 @@ if [ -d "/opt/bin" ] ; then
   export PATH="/opt/bin:$PATH"
 fi
 
+if [ -d "/opt/android-ndk" ] ; then
+  export PATH="/opt/android-ndk:$PATH"
+fi
+
+if [ -d "/opt/android-sdk" ] ; then
+  export PATH="/opt/android-sdk/tools:$PATH"
+fi
+
 # Aliases
 if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
@@ -21,3 +30,6 @@ fi
 
 # If RVM is needed
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# SSH agent
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
