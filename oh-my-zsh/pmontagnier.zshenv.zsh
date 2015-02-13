@@ -3,8 +3,8 @@ export EDITOR='vim'
 export LC_ALL="fr_FR.UTF-8"
 
 # Set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-  export PATH="$HOME/bin:$PATH"
+if [ -d "$HOME/.bin" ] ; then
+  export PATH="$HOME/.bin:$PATH"
 fi
 
 if [ -d "/usr/local/bin" ] ; then
@@ -21,6 +21,11 @@ fi
 
 if [ -d "/opt/android-sdk" ] ; then
   export PATH="/opt/android-sdk/tools:$PATH"
+fi
+
+# Some gems
+if [ -d "$HOME/.gem/ruby/2.2.0/bin" ] ; then
+  export PATH="$HOME/.gem/ruby/2.2.0/bin:$PATH"
 fi
 
 # Aliases

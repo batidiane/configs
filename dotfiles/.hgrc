@@ -2,8 +2,8 @@
 username = TsCl <pmontagnier@gmail.com>
 
 [trusted]
-users=root
-groups=root
+users=root,pierre
+groups=root,pierre
 
 [extensions]
 mq=
@@ -19,3 +19,6 @@ changegroup=
 changegroup.mod_wsgi = touch /var/hg/hgweb.wsgi
 
 [hostfingerprints]
+hg.borrits.eu = 08:db:19:c8:0d:83:18:49:02:c1:4e:1b:71:47:76:33:29:03:36:1e 
+hg.borrits.eu = 29:77:2f:77:be:b5:c3:41:02:58:da:47:fe:86:db:b3:c6:8d:c2:43
+hg.borrits.eu = cd:92:b2:3f:88:fb:1b:7a:96:0b:30:eb:46:18:dc:d8:c1:6a:a5:65 

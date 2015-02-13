@@ -1,5 +1,4 @@
 " Encoding
-
 set encoding=utf-8
 
 " Tabulations size
@@ -63,6 +62,8 @@ filetype plugin indent on
 
 " PowerLine configuration
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+" Powerline Colors
+set t_Co=256
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
 set laststatus=2
 
